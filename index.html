@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Level 2 Web Development Internship Project - Responsive Design & Bootstrap Framework by WebDev.">
+    <title>WebDev | Responsive Frontend Project (Level 2)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== NAVBAR SECTION ==================== -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container">
+                <!-- Brand Logo -->
+                <a class="navbar-brand logo-text" href="#home">
+                    <span class="logo-accent">&lt;/&gt;</span> WebDev
+                </a>
+
+                <!-- Mobile Hamburger Toggle Button -->
+                <button class="navbar-toggler custom-toggler" type="button" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-nav" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== HERO SECTION ==================== -->
+        <section id="home" class="hero-section py-5">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6 hero-text-col">
+                        <span class="badge hero-badge mb-3">Cognifyz Web Development • Level 2</span>
+                        <h1 class="hero-title display-4 fw-bold mb-3">
+                            Build. Design. Create.
+                        </h1>
+                        <p class="hero-description lead mb-4">
+                            Explore the fundamentals of modern web development through responsive layouts, frontend frameworks, and clean design.
+                        </p>
+                        <div class="hero-buttons d-flex flex-wrap gap-3">
+                            <a href="#skills" class="btn btn-primary btn-lg custom-btn">
+                                Explore Skills <i class="bi bi-arrow-down-short ms-1"></i>
+                            </a>
+                            <a href="#about" class="btn btn-outline-secondary btn-lg custom-btn-outline">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="hero-image-wrapper">
+                            <img src="assets/images/hero.jpg" alt="Web Development Illustration" class="img-fluid rounded-4 shadow-lg hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section id="about" class="about-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="about-card p-4 p-md-5 rounded-4 shadow-sm text-center">
+                            <div class="section-tag mb-2">PROJECT OVERVIEW</div>
+                            <h2 class="section-heading mb-4">About This Project</h2>
+                            <p class="about-text lead text-secondary mb-4">
+                                This project demonstrates responsive web design and frontend framework concepts using HTML, CSS, and Bootstrap.
+                            </p>
+                            <hr class="my-4 mx-auto divider">
+                            <div class="row g-4 mt-2 text-start">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="feature-item">
+                                        <div class="feature-icon bg-primary-soft mb-3">
+                                            <i class="bi bi-layout-split"></i>
+                                        </div>
+                                        <h5 class="fw-semibold mb-2">Responsive Layouts</h5>
+                                        <p class="text-muted small">Seamlessly adjusts to desktop, tablet, and mobile displays without horizontal overflow.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="feature-item">
+                                        <div class="feature-icon bg-info-soft mb-3">
+                                            <i class="bi bi-bootstrap"></i>
+                                        </div>
+                                        <h5 class="fw-semibold mb-2">Bootstrap Cards</h5>
+                                        <p class="text-muted small">Clean, modern card UI components featuring images, text, and action buttons.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="feature-item">
+                                        <div class="feature-icon bg-warning-soft mb-3">
+                                            <i class="bi bi-grid-3x3-gap"></i>
+                                        </div>
+                                        <h5 class="fw-semibold mb-2">Bootstrap Grid</h5>
+                                        <p class="text-muted small">Utilizes flexible column breakpoints for smooth multi-screen adaptability.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="feature-item">
+                                        <div class="feature-icon bg-success-soft mb-3">
+                                            <i class="bi bi-phone"></i>
+                                        </div>
+                                        <h5 class="fw-semibold mb-2">CSS Media Queries</h5>
+                                        <p class="text-muted small">Custom breakpoint logic for typography, mobile navigation, and screen optimization.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS / CARD SECTION ==================== -->
+        <section id="skills" class="skills-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-tag">TASK 1 & 2 DEMONSTRATION</span>
+                    <h2 class="section-heading display-6 fw-bold">Web Development Skills</h2>
+                    <p class="text-secondary max-w-600 mx-auto">
+                        Explore core web technologies structured inside responsive Bootstrap cards using modern grid layout utilities.
+                    </p>
+                </div>
+
+                <!-- Responsive Bootstrap Grid -->
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- Card 1: HTML -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card h-100 border-0 shadow-sm custom-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/html.jpg" class="card-img-top" alt="HTML5 Tech Illustration">
+                                <span class="card-badge bg-orange">HTML5</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h3 class="card-title h4 fw-bold mb-2">HTML</h3>
+                                <p class="card-text text-secondary mb-4 flex-grow-1">
+                                    HTML provides the structure and content of a webpage.
+                                </p>
+                                <button type="button" class="btn btn-outline-primary card-btn w-100" data-skill="HTML" data-desc="HTML (HyperText Markup Language) is the standard markup language used to structure web pages and their content using semantic tags.">
+                                    Learn More <i class="bi bi-chevron-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: CSS -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card h-100 border-0 shadow-sm custom-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/css.jpg" class="card-img-top" alt="CSS3 Tech Illustration">
+                                <span class="card-badge bg-cyan">CSS3</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h3 class="card-title h4 fw-bold mb-2">CSS</h3>
+                                <p class="card-text text-secondary mb-4 flex-grow-1">
+                                    CSS is used to style webpages and create attractive layouts.
+                                </p>
+                                <button type="button" class="btn btn-outline-primary card-btn w-100" data-skill="CSS" data-desc="CSS (Cascading Style Sheets) describes how HTML elements are to be displayed on screen, paper, or in other media, enabling responsive designs and custom styling.">
+                                    Learn More <i class="bi bi-chevron-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: JavaScript -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card h-100 border-0 shadow-sm custom-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/javascript.jpg" class="card-img-top" alt="JavaScript Tech Illustration">
+                                <span class="card-badge bg-yellow">JS ES6+</span>
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <h3 class="card-title h4 fw-bold mb-2">JavaScript</h3>
+                                <p class="card-text text-secondary mb-4 flex-grow-1">
+                                    JavaScript adds interactivity and dynamic behavior to webpages.
+                                </p>
+                                <button type="button" class="btn btn-outline-primary card-btn w-100" data-skill="JavaScript" data-desc="JavaScript is a lightweight programming language that allows developers to implement complex features on web pages, handle DOM events, and construct dynamic user interfaces.">
+                                    Learn More <i class="bi bi-chevron-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section id="contact" class="contact-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h2 class="section-heading display-6 fw-bold">Contact Us</h2>
+                    <p class="text-secondary max-w-600 mx-auto">
+                        Have questions regarding our web development project? Feel free to reach out to us using the contact details below.
+                    </p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-card text-center p-4 rounded-4 shadow-sm h-100">
+                            <div class="contact-icon bg-primary-soft mb-3">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Email Address</h5>
+                            <p class="text-secondary mb-0"><a href="mailto:example@email.com" class="contact-link">example@email.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-card text-center p-4 rounded-4 shadow-sm h-100">
+                            <div class="contact-icon bg-success-soft mb-3">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Phone Number</h5>
+                            <p class="text-secondary mb-0"><a href="tel:+919876543210" class="contact-link">+91 98765 43210</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-info-card text-center p-4 rounded-4 shadow-sm h-100">
+                            <div class="contact-icon bg-warning-soft mb-3">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Location</h5>
+                            <p class="text-secondary mb-0">Chennai, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p class="mb-0 text-muted">
+                &copy; 2026 WebDev. All rights reserved. | Built for Cognifyz Level 2 Web Development Internship.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Skill Detail Modal -->
+    <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="skillModalLabel">Skill Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p id="skillModalDescription" class="text-secondary lead fs-6"></p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-primary custom-btn px-4" data-bs-dismiss="modal">Got It!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

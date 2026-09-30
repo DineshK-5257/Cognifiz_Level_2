@@ -1,0 +1,476 @@
+/* ==========================================================================
+   Level 2 Web Development Internship Project - Cognifyz Technologies
+   Stylesheets (style.css)
+   Features: Bootstrap 5 Customization, Responsive Design, CSS Media Queries
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design Tokens & Global Settings
+   -------------------------------------------------------------------------- */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --primary-light: #eef2ff;
+    --accent-color: #06b6d4;
+    --dark-bg: #0f172a;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.2);
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --transition-fast: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .logo-text, .section-heading {
+    font-family: var(--font-heading);
+}
+
+/* --------------------------------------------------------------------------
+   2. Navbar & Hamburger Menu Styling
+   -------------------------------------------------------------------------- */
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 1rem 0;
+    transition: var(--transition-fast);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.logo-accent {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.custom-navbar .nav-link {
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 0.5rem 1.2rem !important;
+    transition: var(--transition-fast);
+    position: relative;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: var(--primary-color);
+}
+
+.custom-navbar .btn-nav {
+    background-color: var(--primary-light);
+    color: var(--primary-color) !important;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem !important;
+    margin-left: 0.5rem;
+}
+
+.custom-navbar .btn-nav:hover {
+    background-color: var(--primary-color);
+    color: #ffffff !important;
+}
+
+/* Hamburger Icon Bar Animation */
+.custom-toggler {
+    border: none;
+    background: transparent;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hamburger-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-bg);
+    border-radius: 3px;
+    transition: var(--transition-fast);
+}
+
+.custom-toggler[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.custom-toggler[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.custom-toggler[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   3. Hero Section Styling
+   -------------------------------------------------------------------------- */
+.hero-section {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-badge {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+.hero-title {
+    color: var(--dark-bg);
+    letter-spacing: -1px;
+    line-height: 1.15;
+}
+
+.hero-description {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.custom-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 0.75rem 1.8rem;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+}
+
+.custom-btn:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+}
+
+.custom-btn-outline {
+    border: 2px solid #e2e8f0;
+    color: var(--text-primary);
+    border-radius: 12px;
+    padding: 0.75rem 1.8rem;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.custom-btn-outline:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    color: var(--dark-bg);
+}
+
+.hero-img {
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: var(--transition-smooth);
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   4. About Section Styling
+   -------------------------------------------------------------------------- */
+.about-section {
+    background-color: #ffffff;
+}
+
+.about-card {
+    background-color: var(--light-bg);
+    border: 1px solid #f1f5f9;
+}
+
+.section-tag {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.section-heading {
+    color: var(--dark-bg);
+    letter-spacing: -0.5px;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.bg-primary-soft { background-color: #eef2ff; color: #4f46e5; }
+.bg-info-soft { background-color: #e0f2fe; color: #0284c7; }
+.bg-warning-soft { background-color: #fef3c7; color: #d97706; }
+.bg-success-soft { background-color: #dcfce7; color: #16a34a; }
+
+/* --------------------------------------------------------------------------
+   5. Task 1 & 2 Cards & Responsive Grid Styling
+   -------------------------------------------------------------------------- */
+.skills-section {
+    background-color: #f8fafc;
+}
+
+.custom-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--card-bg);
+    transition: var(--transition-smooth);
+    box-shadow: var(--card-shadow);
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--hover-shadow);
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.custom-card:hover .card-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.bg-orange { background-color: #f97316; }
+.bg-cyan { background-color: #0284c7; }
+.bg-yellow { background-color: #eab308; color: #000 !important; }
+
+.card-btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: var(--transition-fast);
+}
+
+.card-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   6. Contact & Footer Styling
+   -------------------------------------------------------------------------- */
+.contact-section {
+    background-color: #ffffff;
+}
+
+.contact-info-card {
+    background-color: var(--light-bg);
+    border: 1px solid #f1f5f9;
+    transition: var(--transition-fast);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.contact-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+.footer {
+    background-color: var(--dark-bg);
+    border-top: 1px solid #1e293b;
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+/* --------------------------------------------------------------------------
+   7. EXPLICIT CSS MEDIA QUERIES (REQUIREMENT FOR LEVEL 2)
+   -------------------------------------------------------------------------- */
+
+/* Desktop Breakpoints (Above 992px) */
+@media (min-width: 992px) {
+    .hero-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+/* Tablet Breakpoints (Between 768px and 991px) */
+@media (max-width: 991.98px) {
+    /* Mobile / Tablet Hamburger Navigation Collapse */
+    .custom-navbar .navbar-collapse {
+        background-color: #ffffff;
+        padding: 1.2rem;
+        border-radius: 16px;
+        margin-top: 1rem;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid #f1f5f9;
+    }
+
+    .custom-navbar .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .custom-navbar .btn-nav {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-text-col {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+/* Mobile Breakpoints (Below 768px) */
+@media (max-width: 767.98px) {
+    html {
+        font-size: 15px;
+    }
+
+    .hero-section {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+    .custom-btn, .custom-btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .card-img-wrapper {
+        height: 180px;
+    }
+
+    .about-card {
+        padding: 1.5rem !important;
+    }
+
+    /* Prevent horizontal scroll */
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+/* Small Mobile Breakpoints (Below 576px) */
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem !important;
+    }
+}
